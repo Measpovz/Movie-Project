@@ -29,7 +29,7 @@ const Footer = () => {
           </ul>
 
           <div className='copyright-text'>
-              <p>&copy; 2025 Stranger Things</p>
+              <p>&copy; 2025 MeasPovz</p>
           </div>
         </div>
     </div>
