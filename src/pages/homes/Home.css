@@ -1,0 +1,221 @@
+
+
+.home-container{
+    background-color: rgb(53, 53, 53);
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+}
+
+.box{
+    width: 100%;
+    height: 100vh;
+    background-color: antiquewhite;
+    position: relative;
+}
+.coverImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.content-title{
+    position: absolute;
+    inset: 0;
+    top: 35%;
+    left: 80px;
+}
+.content-title > h1{
+    font-size: 5rem;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    transition: all 0.2s ease;
+    text-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
+.content-title:hover > h1{
+    transform: translateY(-10px);
+    color: yellow;
+}
+.content-title > .rating{
+    color: rgb(255, 227, 17);
+    font-size: 20px;
+    display: flex;
+    gap: 5px;
+    margin-bottom: 8px;
+    text-shadow: 0px 0px 8px black;
+}
+.content-title > span{
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    margin: 0px 10px 0px 0px;
+}
+.content-title > p{
+    width: 36%;
+    font-size: 12px;
+    padding: 10px 0px;
+    color: white;
+}
+
+.content-title > h4{
+    font-size: 12px;
+    color: rgb(255, 43, 43);
+}
+.content-title > h4 > span{
+    color: rgb(255, 255, 255);
+    margin-left: 10px;
+    font-size: 12px;
+    /* background-color: antiquewhite; */
+}
+.btn-play{
+    padding: 10px 20px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-top: 30px;
+    background-color: red;
+    color: white;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+.btn-play:hover{
+    color: rgb(0, 12, 25);
+    background-color: rgb(255, 255, 255);
+}
+
+.img-play{
+    display: flex;
+    /* background-color: antiquewhite; */
+    width: 250px;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    position: absolute;
+    bottom: 5rem;
+    right: 80px;
+    cursor: pointer;
+    text-shadow: 0px 0px 10px rgb(0, 0, 0);
+    transition: all 0.1s linear;
+}
+.img-play:hover{
+    transform: scale(1.1);
+}
+.img-play img{
+    width: 60px;
+}
+.img-play > h4{
+    color: white;
+}
+
+/* Arrow Click */
+.control-button > button{
+    width: 40px;
+    height: 40px; 
+    background-color: rgba(2, 2, 2, 0.259);
+    border-radius: 50%;
+    font-size: 20px;
+    border: 2px solid rgb(184, 184, 184);
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.control-button > button:hover{
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgba(2, 2, 2, 0.427);
+    color: rgb(251, 0, 0);
+    transition: all 0.2s ease;
+    
+}
+.control-button .next{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+.control-button .prev{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+/* Media Screen Size */
+@media screen and (max-width: 1200px){
+    .box{
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(255, 145, 0);
+    }
+    .coverImg{
+        padding-top: 50px;
+    }
+    .content-title{
+        font-size: 16px;
+    }
+    .content-title > h1{
+        font-size: 4.5rem;
+    }
+}
+
+@media screen and (max-width: 849px){
+    .content-title > h1{
+        font-size: 3.5rem;
+    }
+    .content-title{
+        font-size: 14px;
+        left: 60px;
+    }
+    .content-title > p {
+        font-size: 10px;
+    }
+    .content-title > .btn-play{
+        font-size: 12px;
+        padding: 10px 20px;
+    }
+    .control-button > button{
+        width: 30px;
+        height: 30px;
+    }
+    .img-play{
+        right: 0px;
+    }
+
+}
+@media screen and (max-width: 599px){
+    .content-title{
+        top: 255px;
+    }
+    .content-title > h1{
+        font-size: 3rem;
+        margin-bottom: 30px;
+    }
+    .rating i {
+        font-size: 12px;
+    }
+    .img-play{
+        bottom: 30px;
+        right: 0;
+    }
+    .img-play img{
+        width: 36px;
+    }
+    .img-play > h4{
+        font-size: 10px;
+    }
+    .btn-play {
+        position: absolute;
+        bottom: 30px;
+    }
+    .content-title > .btn-play{
+        font-size: 10px;
+        /* padding: 10px 20px; */
+    }
+    .content-title > p{
+        width: 75%;
+    }
+}

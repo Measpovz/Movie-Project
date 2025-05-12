@@ -1,0 +1,320 @@
+.navbar-header{
+    width: 100%;
+    background-color: rgba(9, 9, 9, 0.83);
+    position:fixed;
+    top: 0;
+    z-index: 999;
+    backdrop-filter: blur(6px);
+}
+.navbar{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 14vh;
+    padding: 0px 20px;
+}
+
+.logo-img{
+    width: 120px;
+    display: flex;
+    align-items: center;
+}
+.toggle{
+    color: aliceblue;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.toggle:hover{
+    color: #ff3700;
+
+}
+
+.toggle svg {
+    width: 35px;
+    height: 35px;
+}
+
+.nav-lists{
+    display: flex;
+    gap: 36px;
+    margin-left: 4rem;
+    justify-content: center;
+    align-items: center;
+}
+.nav-lists li{
+    list-style-type: none;
+}
+.nav-lists li a{
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    transition: 0.1s;
+}
+.nav-lists li a:hover{
+    padding-bottom: 2px;
+    color: yellow;
+    border-bottom: 2px solid rgb(255, 0, 0);
+}
+
+.mobile-only{
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: aliceblue; */
+    width: 430px;   
+}
+
+.account-bar{
+    color: white;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-around;
+}
+.account-bar svg:hover{
+    color: #ff0000;
+}
+.search-bar{
+    width: 50%;
+    display: block;
+    height: 25px;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.search-bar > input{
+    width: 85%;
+    height: 102%;
+    outline: none;
+    border: none;
+    color: rgb(255, 255, 255);
+    padding-left: 12px;
+    flex-direction: column;
+    background-color: rgba(61, 61, 61, 0.589);
+}
+
+.search-bar > .btn-search {
+    width: 15%;
+    height: 100%;
+    outline: none;
+    border: none;
+    color: rgb(195, 195, 195);
+    background-color: #cdcdcd52;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.1s;
+}
+.search-bar > .btn-search:hover{
+    color: white;
+    background-color: rgb(139, 139, 139);
+}
+
+
+
+.btn-bar{
+    background-color: #e60000;
+    color: rgb(255, 255, 255);
+    padding: 10px 16px;
+    font-size: 14px;
+    outline: none;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    transition: all 0.1s;
+}
+.btn-bar:hover{
+    color: rgb(232, 232, 232);
+    background-color: #b80000;
+}
+
+/* Mobile Media */
+@media screen and (max-width: 1200px) {
+    .navbar{
+        width: 100%;
+        padding: 0px 10px;
+    }
+    .nav-lists{
+        gap: 30px;
+        margin-left: 2rem;
+    }
+    .mobile-only{
+        width: 360px;
+        margin-left: 0px;
+    }
+    .account-bar{
+        gap: 10px;
+    }
+    .account-bar svg {
+        width: 20px;
+    }
+    .btn-bar{
+        font-size: 12px;
+    }
+    
+
+}
+/* ========================= */
+@media screen and (max-width: 992px) {
+    .navbar{
+        width: 100%;
+        padding: 0px 20px;
+    }
+    .logo-img{
+        width: 100px;
+    }
+    .nav-lists{
+        margin: 0px 40px;
+        gap: 20px;
+    }
+    .nav-lists li a{
+        font-size: 14px;
+    }
+    .mobile-only{
+        width: 300px;
+        margin-left: 10px;
+    }
+
+}
+
+@media screen and (max-width: 849px) {
+    
+    .navbar{
+        width: 100%;
+        flex-wrap: wrap;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100px;
+        position: relative;
+    }
+    .logo-img{
+        width: 120px;
+        margin: 0px 10px;
+    }
+    .account-bar{
+        gap: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    .nav-lists{
+        width: 100%;
+        position: absolute;
+        top: -100px;
+        left: 0px;
+        padding: 0px 40px;
+        margin-left: 0px;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(22, 22, 22, 0.981);
+        overflow: hidden;    
+        height: 0;
+    }
+    .nav-lists.active {
+        top: 100px;
+        height: 100vh;
+    }
+    .nav-lists li{
+        width: 100%;
+        font-size: 20px;
+        margin: 8px 0px;
+        align-items: center;
+    }
+    .toggle{
+        display: block;
+        margin-left: 10px;
+    }
+    .mobile-only {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .search-bar{
+        height: 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+    }
+    .account-bar{
+        width: 40%;
+        display: flex;
+        align-items: center; 
+        justify-content: space-between;
+        padding-left: 30px;
+    }
+    .account-bar svg{
+        align-items: center;
+        display: flex;
+        margin-top: 10px;
+        width: 30px;
+    }
+    .btn-bar{
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .navbar{
+        flex-wrap: wrap;
+        padding: 10px 30px;
+        width: 100%;
+        height: 100px;
+        justify-content: space-between;
+    }
+    .nav-lists{
+        padding: 0px 30px;
+    }
+    .search-bar{
+        height: 30%;
+        width: 55%;
+    }
+    .account-bar{
+        width: 45%;
+    }
+    .account-bar svg{
+        width: 20px;
+    }
+    .btn-bar{
+        font-size: 13px;
+    }
+
+}
+@media screen and (max-width: 420px){
+    .search-bar{
+        height: 25%;
+        width: 60%;
+    }
+    .btn-bar{
+        font-size: 10px;
+        padding: 10px 10px;
+    }
+    .account-bar svg{
+        width: 16px;
+        margin-left: -10px;
+    }
+    .navbar{
+        flex-wrap: wrap;
+        padding: 10px 20px;
+        width: 100%;
+        height: 100px;
+        justify-content: space-between;
+    }
+    .nav-lists{
+        padding: 0px 26px;
+    }
+}

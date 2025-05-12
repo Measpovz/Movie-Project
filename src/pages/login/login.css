@@ -1,0 +1,107 @@
+.login-content{
+    width: 100%;
+    height: 100vh;
+    padding: 40px 13%;
+    object-fit: cover;
+    background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.825), rgba(6, 6, 6, 0.41)), 
+    url('/background_banner.jpg');
+}
+
+.login-form{
+    max-width: 430px;
+    background-color: rgba(255, 255, 255, 0.107);
+    padding: 40px 60px;
+    margin: auto;
+    border-radius: 10px;
+    backdrop-filter: blur( 4px);
+    margin-top: 120px;
+}
+.login-form > h1{
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+    font-weight: 500px;
+    margin-bottom: 20px;
+}
+.login-form input{
+    width: 100%;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.583);
+    outline: none;
+    color: rgb(55, 55, 55);
+    border: none;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 16px 14px;
+    font-size: 14px;
+}
+input::placeholder{
+    font-size: 15px;
+    color: rgb(40, 40, 40);
+}
+.login-form button{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(255, 37, 37);
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    margin-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.login-form button:hover{
+
+}
+
+.form-helping{
+    display: flex;
+    font-size: 14px;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(201, 201, 201);
+}
+.remember{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.remember > input{
+    width: 18px;
+    height: 18px;
+}
+
+.form-switch{
+    margin-top: 40px;
+    font-size: 14px;
+    color: #ababab;
+}
+
+.form-switch  span{
+    margin-left: 8px;
+    color: #e5e5e5;
+    cursor: pointer;
+}
+.form-switch  span:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+@media screen and (max-width: 500px){
+    .login-content{
+        padding: 40px 20px;
+    }
+    .login-form > h1{
+        font-size: 26px;
+        color: rgb(255, 255, 255);
+    }
+    .login-form{
+        padding: 40px 20px;
+        margin: auto;
+        border-radius: 10px;
+        backdrop-filter: blur( 4px);
+        margin-top: 120px;
+    }
+}
+
